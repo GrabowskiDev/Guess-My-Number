@@ -2,4 +2,89 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font-family: 'Dosis', sans-serif;
+}
+/* REMOVE ARROWS BUTTON FROM INPUT 
+ Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+html {
+	font-size: 32px;
+}
+
+body {
+	font-family: 'Dosis', sans-serif;
+}
+
+button {
+	font-size: 1rem;
+	border: 2px solid black;
+	border-radius: 14px;
+	margin: 0.1rem;
+	padding: 0.1rem;
+}
+
+button:hover {
+	opacity: 0.3;
+}
+
+input {
+	font-size: 1rem;
+	width: 16%;
+	height: 1em;
+
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 12px;
+	margin: 0.3em;
+}
+
+.center {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+main {
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main button {
+	font-size: 0.75em;
+	width: 1.5em;
+	height: 1.5em;
+}
+
+main input {
+	font-size: 1em;
+	height: 2em;
+	width: 1.8em;
+}
+
+main h2 {
+	margin-left: 0.4em;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.inline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

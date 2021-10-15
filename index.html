@@ -4,10 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="styles.css" />
 		<title>Guess-My-Number</title>
 	</head>
 	<body>
+		<div class="center">
+			<h2>Guess-My-Number</h2>
+			<main>
+				<!-- Buttons for increase/decrease, input, > <, and ? or number -->
+				<div class="column">
+					<button id="increase">+</button>
+					<button id="decrease">-</button>
+				</div>
+				<input type="number" />
+				<h2>=</h2>
+				<h2>?</h2>
+			</main>
+			<div class="inline">
+				<button>Check!</button><button>Again</button>
+			</div>
+			<div>
+				<h3>Score: 20</h3>
+				<h3>Highscore: 34</h3>
+			</div>
+			<div class="inline">
+				<h5>Numbers range from 1 to</h5>
+				<input type="number" id="range" />
+			</div>
+		</div>
 		<script src="script.js"></script>
 	</body>
 </html>
