@@ -33,10 +33,18 @@
 			<div>
 				<h3>Score: <span id="score">20</span></h3>
 				<h3>Highscore: <span id="highscore">34</span></h3>
+				<h3>Games won: <span id="games">0</span></h3>
 			</div>
 			<div class="inline">
 				<h5>Numbers range from 1 to</h5>
-				<input type="number" id="range" />
+				<input
+					type="tel"
+					id="range"
+					value="20"
+					min="2"
+					max="999"
+					oninput="if(this.value>999){this.value='999';}else if(this.value<2){this.value='2';}"
+				/>
 			</div>
 		</div>
 		<script src="script.js"></script>
