@@ -13,7 +13,7 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: 'Dosis', sans-serif;
+	font-family: 'Dosis', cursive;
 	color: var(--secondary);
 }
 /* REMOVE ARROWS BUTTON FROM INPUT 
@@ -34,7 +34,10 @@ html {
 
 body {
 	background-color: var(--primary);
-	font-family: 'Dosis', sans-serif;
+}
+
+h2 {
+	text-shadow: 3px 3px var(--accent);
 }
 
 button {
@@ -42,7 +45,7 @@ button {
 	background-color: var(--accent);
 	border: 2px solid var(--secondary);
 	border-radius: 14px;
-	margin: 0.1rem;
+	margin: 0.25rem;
 	padding: 0.1rem;
 }
 
@@ -79,18 +82,19 @@ main {
 
 main button {
 	font-size: 0.75em;
-	width: 1.5em;
-	height: 1.5em;
+	width: 1.6em;
+	height: 1.6em;
 }
 
 main input {
 	font-size: 1em;
 	height: 2em;
 	width: 1.8em;
+	text-shadow: 3px 3px var(--primary);
 }
 
 main h2 {
-	margin-left: 0.4em;
+	margin-left: 0.3em;
 }
 
 .column {
@@ -102,4 +106,14 @@ main h2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+.shadow {
+	box-shadow: 5px 5px 9px rgb(33, 33, 33);
+}
+
+.box {
+	background-color: var(--accent);
+	border: 2px solid var(--secondary);
+	border-radius: 12px;
+	padding: 0.3em;
 }
