@@ -7,17 +7,20 @@ function randomNumber(range) {
 
 function start() {
 	number = randomNumber(rangeInput.value);
+	score = rangeInput.value;
+	scoreDisplay.textContent = score;
 	document.querySelector('#number').textContent = '?';
 	checkButton.disabled = false;
 }
 
-//Score and highscore system
 //Some animations
 
 //Query Selectors:
 const guess = document.querySelector('#guess');
 const rangeInput = document.querySelector('#range');
 const mark = document.querySelector('#mark');
+const scoreDisplay = document.querySelector('#score');
+const highscoreDisplay = document.querySelector('#highscore');
 const checkButton = document.querySelector('#check');
 const againButton = document.querySelector('#again');
 
@@ -33,14 +36,21 @@ checkButton.addEventListener('click', () => {
 		alert('Insert a number first');
 	} else if (guess.value > number) {
 		mark.textContent = '>';
+		score--;
+		scoreDisplay.textContent = score;
 	} else if (guess.value < number) {
 		mark.textContent = '<';
+		score--;
+		scoreDisplay.textContent = score;
 	} else if (guess.value == number) {
 		mark.textContent = '=';
 		document.querySelector('#number').textContent = number;
 		checkButton.disabled = true;
 		games++;
 		document.querySelector('#games').textContent = games;
+		//Update highscore
+		if (score > Number(highscoreDisplay.textContent))
+			highscoreDisplay.textContent = score;
 	}
 });
 
