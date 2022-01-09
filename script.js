@@ -13,10 +13,6 @@ function start() {
 	checkButton.disabled = false;
 }
 
-function checkForLose() {}
-
-//Some animations
-
 //Query Selectors:
 const guess = document.querySelector('#guess');
 const rangeInput = document.querySelector('#range');
@@ -45,15 +41,24 @@ checkButton.addEventListener('click', () => {
 		mark.textContent = '<';
 		score--;
 		scoreDisplay.textContent = score;
+
+		//WIN
 	} else if (guess.value == number) {
 		mark.textContent = '=';
 		document.querySelector('#number').textContent = number;
 		checkButton.disabled = true;
 		gamesWon++;
 		gamesWonDisplay.textContent = gamesWon;
+
+		gamesWonDisplay.style.color = 'lime';
+		gamesWonDisplay.style.fontSize = '135%';
+		setTimeout(() => {
+			gamesWonDisplay.style.color = 'var(--secondary)';
+			gamesWonDisplay.style.fontSize = '100%';
+		}, 1000);
 		//Update highscore
-		if (score > Number(highscoreDisplay.textContent))
-			highscoreDisplay.textContent = score;
+		if (score > Number(highscoreDisplay.textContent));
+		highscoreDisplay.textContent = score;
 	}
 
 	//Check for lose

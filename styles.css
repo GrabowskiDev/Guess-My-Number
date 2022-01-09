@@ -47,10 +47,16 @@ button {
 	border-radius: 14px;
 	margin: 0.25rem;
 	padding: 0.1rem;
+
+	transition: scale 0.1s;
 }
 
 button:hover {
 	opacity: 0.3;
+}
+
+button:active:enabled {
+	scale: 90%;
 }
 
 input {
@@ -116,4 +122,8 @@ main h2 {
 	border: 2px solid var(--secondary);
 	border-radius: 12px;
 	padding: 0.3em;
+}
+
+#games {
+	transition: all 1s ease;
 }
