@@ -13,6 +13,8 @@ function start() {
 	checkButton.disabled = false;
 }
 
+function checkForLose() {}
+
 //Some animations
 
 //Query Selectors:
@@ -21,11 +23,12 @@ const rangeInput = document.querySelector('#range');
 const mark = document.querySelector('#mark');
 const scoreDisplay = document.querySelector('#score');
 const highscoreDisplay = document.querySelector('#highscore');
+const gamesWonDisplay = document.querySelector('#games');
 const checkButton = document.querySelector('#check');
 const againButton = document.querySelector('#again');
 
 //Variables:
-let games = 0;
+let gamesWon = 0;
 
 //On pageload:
 start();
@@ -46,11 +49,19 @@ checkButton.addEventListener('click', () => {
 		mark.textContent = '=';
 		document.querySelector('#number').textContent = number;
 		checkButton.disabled = true;
-		games++;
-		document.querySelector('#games').textContent = games;
+		gamesWon++;
+		gamesWonDisplay.textContent = gamesWon;
 		//Update highscore
 		if (score > Number(highscoreDisplay.textContent))
 			highscoreDisplay.textContent = score;
+	}
+
+	//Check for lose
+	if (score === 0) {
+		checkButton.disabled = true;
+		gamesWon--;
+		gamesWonDisplay.textContent = gamesWon;
+		alert("You lose! (i don't even know how you did it)");
 	}
 });
 
